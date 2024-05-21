@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css">
+    <style>
+        * {
+            /*border: 0.08px solid black;*/
+            margin: 0px;
+            padding: 0px;
+        }
+
+
+        @media screen and (min-width:444px) {
+            .nvr {
+                display: flex;
+                /* background-color: rgb(151, 151, 225);*/
+                background-color: rgb(44, 44, 88);
+            }
+
+            li {
+                list-style: none;
+                padding: 0.8% 0.8% 0.8% 0.8%;
+                margin: 0.8% 0.8% 0.8% 0.8%;
+                font-size: 24px;
+            }
+
+            .lft {
+                position: absolute;
+                right: 2%;
+            }
+
+            a {
+                text-decoration: none;
+                position: relative;
+                color: white;
+                /* border: 2px solid black; */
+                padding: 12px 12px 12px 12px;
+                border-radius: 12px;
+            }
+
+            a:hover {
+                color: yellow;
+            }
+
+            a::after {
+                position: absolute;
+                content: ' ';
+                display: block;
+                background-color: rgb(255, 255, 73);
+                height: 3px;
+                width: 0%;
+                bottom: -1px;
+                left: -3.25px;
+                transition: 0.18s;
+                border-radius: 2px solid pink;
+            }
+
+            a:hover::after {
+                width: 100%;
+            }
+        }
+
+        @media (min-width:204px) and (max-width:444px) {
+            .nvr {
+                /* background-color: rgb(151, 151, 225);*/
+                background-color: rgb(156, 165, 145);
+                height: 50%;
+            }
+
+            li {
+                border: 2px solid white;
+                list-style: none;
+                margin: 2% 2% 2% 2%;
+                padding: 2% 2% 2% 2%;
+                font-size: 18px;
+
+            }
+
+            a {
+                text-decoration: none;
+                position: relative;
+                left: 30%;
+                color: white;
+                /* border: 2px solid black; */
+                padding: 12px 12px 12px 12px;
+                border-radius: 12px;
+            }
+
+            a:hover {
+                color: yellow;
+            }
+
+            a::after {
+                position: absolute;
+                content: ' ';
+                display: block;
+                background-color: rgb(255, 255, 73);
+                height: 3px;
+                width: 0%;
+                bottom: -1px;
+                left: -3.25px;
+                transition: 0.18s;
+                border-radius: 2px solid pink;
+            }
+
+            a:hover::after {
+                width: 100%;
+            }
+        }
+
+        @media screen and (max-width:204px) {
+            .nvr {
+                /* background-color: rgb(151, 151, 225);*/
+                background-color: rgb(44, 44, 88);
+                height: 50%;
+            }
+
+            li {
+                border: 2px solid white;
+                list-style: none;
+                margin: 2% 2% 2% 2%;
+                padding: 2% 2% 2% 2%;
+                font-size: 18px;
+
+            }
+
+            a {
+                text-decoration: none;
+                position: relative;
+                left: 20%;
+                color: white;
+                /* border: 2px solid black; */
+                padding: 12px 12px 12px 12px;
+                border-radius: 12px;
+            }
+
+            a:hover {
+                color: yellow;
+            }
+
+            a::after {
+                position: absolute;
+                content: ' ';
+                display: block;
+                background-color: rgb(255, 255, 73);
+                height: 3px;
+                width: 0%;
+                bottom: -1px;
+                left: -3.25px;
+                transition: 0.18s;
+                border-radius: 2px solid pink;
+            }
+
+            a:hover::after {
+                width: 100%;
+            }
+        }
+
+        input[type=text],
+        select {
+            width: 100%;
+            padding: 4% 4% 4% 4%;
+            border: 2px solid black;
+            margin: 8px 8px 8px 8px;
+            display: inline-block;
+            border: 1px solid black;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type=submit] {
+            width: 100%;
+            border: 2px solid black;
+            background-color: rgb(18, 18, 161);
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type=number]{
+            width: 100%;
+            padding: 8% 8% 8% 8%;
+            border: 2px solid black;
+            margin: 8px 8px 8px 8px;
+            display: inline-block;
+            border: 1px solid black;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+       
+
+        input[type=submit]:hover {
+            border: 2px solid black;
+            background-color: rgb(165, 165, 165);
+            color: yellow;
+        }
+        label{
+            position: relative;
+            left: 8%;
+            font-size: 22px;
+            color: white;
+        }
+
+        .frm {
+            display:flex;
+            border: 2px solid white;
+            background-color: rgb(59, 57, 30);
+            height: 500px;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        footer{display: flex;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(24, 24, 67);
+            color: white;
+            height: 80px;
+        }
+        .animation{
+            background-image: url('./images/OIG2.jpeg');
+        }
+        form{
+            border: 2px solid white;
+            padding: 6% 6% 6% 6%;
+        }
+    </style>
+</head>
+
+<body>
+    {{>navbarsignin}}
+    <div class="frm">
+        <form action="/login" style="background-color: rgb(24, 24, 67); "; method="get">
+            <label for="fname"> Email: - </label><br>
+            <input type="text" id="fname" name="email" value="John"><br>
+            <label for="lname"> Password :- </label><br>
+            <input type="text" id="lname" name="password" value="Doe"><br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    <footer>
+       <h1> Welcome, to your website </h1>
+    </footer>
+
+
+
+    <script src="./index.js"></script>
+</body>
+
+</html>

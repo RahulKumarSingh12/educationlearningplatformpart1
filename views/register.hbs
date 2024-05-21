@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css">
+</head>
+
+<body>
+    {{>navbarlogin}}
+    <!--
+    <div class="nvr">
+        <li><a href="/home">Home</a></li>
+        <li><a href="/about">About Us</a></li>
+        <li><a href="/contact">ContactUS</a></li>
+        <li class="lft"><a href="/login">LogIn</a></li>
+    </div>
+    -->
+    <div class="frm">
+        <div class="frmmm">
+            <div class="animation">
+                <img src="./images" id="immg" width="90%" alt="">
+            </div>
+            <form action="/signin" method="get">
+                <label for="lname"> First Name :- </label><br>
+                <input type="text" id="lname" name="firstname" value="Doe"><br>
+                <label for="lname"> Last Name :- </label><br>
+                <input type="text" id="lname" name="lastname" value="Doe"><br>
+                <label for="fname"> Email: - </label><br>
+                <input type="text" id="fname" name="email" value="John"><br>
+                <label for="lname"> Password :- </label><br>
+                <input type="text" id="lname" name="password" value="Doe"><br>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <h1> Welcome, to your website </h1>
+    </footer>
+
+
+
+    <script src="./index.js"></script>
+</body>
+
+</html>
